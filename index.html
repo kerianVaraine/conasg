@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+    <title>Conasg - contracting and engineering</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/pure.css"> -->
+
+
+    <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+        <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/layouts/side-menu.css">
+    <!--<![endif]-->
+
+    <!-- added stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div id="layout">
+        <!-- Menu toggle -->
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+
+        <div id="menu">
+            <div class="pure-menu">
+                <a class="pure-menu-heading" href="#"><img src="imgs/logo_sml.png" alt="conasg logo_side" class="logo pure-img"></a>
+
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
+                    <li class="pure-menu-item"><a href="contracting.html" class="pure-menu-link">Contracting</a></li>
+
+                    <li class="pure-menu-item">
+                        <a href="engineering.html" class="pure-menu-link">Engineering</a>
+                    </li>
+
+                    <li class="pure-menu-item"><a href="history.html" class="pure-menu-link">History</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="main">
+            <div class="header background-c">
+                <h1>Conasg</h1>
+                <h2>Contracting and Engineering LTD</h2>
+            </div>
+
+            <!-- Slideshow -->
+            <div class="section">
+                <div id="slides">
+                    <img src="imgs/workshop1.jpg" alt="workshop glam" class="slide showing">
+                    <img src="imgs/workshop2.jpg" alt="workshop glam" class="slide">
+                    <img src="imgs/bailer1.jpg" alt="bailer glam" class="slide">
+                    <img src="imgs/workshop2.jpg" alt="workshop glam" class="slide">
+                    <img src="imgs/combination.jpg" alt="combo glam" class="slide">
+                    <img src="imgs/tractor1.jpg" alt="tractor glam" class="slide">
+                    <img src="imgs/tractor2.jpg" alt="tractor glam" class="slide">
+                    <img src="imgs/tractor3.jpg" alt="tractor glam" class="slide">
+                    <img src="imgs/tractor4.jpg" alt="tractor glam" class="slide">
+                    <img src="imgs/tractor5.jpg" alt="tractor glam" class="slide">
+                    <img src="imgs/truck1.jpg" alt="truck glam" class="slide">
+                </div>
+            </div>
+            <div class="content">
+                <div id="contact-grid">
+                    <!-- <div class=""> -->
+                    <h2 class="header contact-us">Contact us</h2>
+                    <!-- </div> -->
+                    <!-- <div class=""> -->
+                    <h2 class="content-subhead david">David: 021 339384</h2>
+                    <!-- </div> -->
+                    <!-- <div> -->
+                    <h2 class="content-subhead peter">Peter: 021 264886</h2>
+                    <!-- </div> -->
+                </div>
+                <div id="service-short">
+                    <!-- hide short on screens larger than laptop -->
+                    <p class="hide-on-big">We provide a range of rural <a href="#">contracting</a> and <a href="#">engineering</a> services.</p>
+                    <p class="show-on-big">Providing extensive rural baleage, silage, cultivation and enginneering services to the greater Dipton area since 1989.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/ui.js"></script>
+    <script>
+        let slides = document.querySelectorAll('#slides .slide');
+        let currentSlide = 0;
+        let nextSlide = function() {
+            slides[currentSlide].className = 'slide';
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].className = 'slide showing';
+        }
+        let slideInterval = setInterval(nextSlide, 3000);
+    </script>
+
+</body>
+
+</html>
