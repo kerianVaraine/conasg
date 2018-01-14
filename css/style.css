@@ -25,6 +25,10 @@
             .short-top {
                 margin-top: -40px;
             }
+            
+            ul {
+                padding: 0px 5px;
+            }
             /* side menu styling change for logo */
             
             #menu img {
