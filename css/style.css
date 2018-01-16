@@ -1,7 +1,7 @@
             /* various changes to def pure.css */
             
             body {
-                overflow-x: hidden;
+                /* overflow-x: hidden; */
             }
             
             .small-caps {
@@ -89,7 +89,7 @@
             
             .contact-us {
                 padding-top: 0em;
-                width: 100%;
+                /* width: 100%; */
                 text-align: left;
             }
             
